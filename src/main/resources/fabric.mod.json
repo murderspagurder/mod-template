@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "modtemplate",
+  "name": "Mod Template",
+  "version": "${version}",
+  "authors": ["A Mod Author"],
+  "contact": {
+    "sources": "",
+    "issues": ""
+  },
+  "description": "A Mod Description",
+  "icon": "assets/icon.png",
+  "license": "MIT",
+  "environment": "*",
+  "accessWidener": "modtemplate.accesswidener",
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "dev.spagurder.modtemplate.fabric.FabricEntrypoint"
+      }
+    ],
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "dev.spagurder.modtemplate.fabric.FabricClientEntrypoint"
+      }
+    ],
+    "fabric-datagen": [
+      {
+        "adapter": "kotlin",
+        "value": "dev.spagurder.modtemplate.fabric.datagen.FabricDataGeneratorEntrypoint"
+      }
+    ]
+  },
+  "mixins": [
+    "modtemplate.mixins.json"
+  ],
+  "depends": {
+    "fabric-api": "*",
+    "fabric-language-kotlin": "*"
+  }
+}
